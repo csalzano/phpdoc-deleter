@@ -54,7 +54,7 @@ class Breakfast_WP_Parser_Deleter
 
         foreach( $posts_to_delete as $post )
         {
-            wp_delete_post( $post->ID, apply_filters( true, 'phpdoc_deleter_force_delete' ) );
+            wp_delete_post( $post->ID, apply_filters( 'phpdoc_deleter_force_delete', true ) );
         }
 
         //delete empty terms from taxonomies
